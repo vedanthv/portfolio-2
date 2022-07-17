@@ -1,6 +1,6 @@
-baseURL: "https://vedanthvbaliga.com/"
+baseURL: "https://vedanthvbaliga.netlify.app/"
 languageCode: en-us
-title: Vedanth V Baliga
+title: Vedanth  Baliga
 theme: PaperMod
 
 menu:
@@ -50,7 +50,7 @@ params:
     enabled: true
     title: "Vedanth V Baliga"
     subtitle: Junior Year Computer Science Undergrad | **Kaggle Expert**<br> Dabbling with Data Science <br> Loves Building **End to End ML Solutions** For Real World Problems
-    imageUrl: "home/me.jfif"
+    imageUrl: "home/me.jpg"
     imageWidth: 220
     imageHeight: 220
     buttons:
