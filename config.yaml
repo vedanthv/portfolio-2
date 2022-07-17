@@ -12,15 +12,15 @@ menu:
     - identifier: projects
       name: Projects
       url: /projects
-      weight: 30
+      weight: 20
     - identifier: experience
       name: Experience
       url: /experience
-      weight: 40
+      weight: 30
     - identifier: blog
       name: Blog
       url: /blog
-      weight: 20
+      weight: 40
     - identifier: search
       name: Search
       url: /search
