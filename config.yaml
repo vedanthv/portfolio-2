@@ -72,8 +72,8 @@ params:
       url: "https://www.linkedin.com/in/vedanthbaliga/"
     - name: "github"
       url: "https://github.com/vedanthv"
-    - name: "cv"
-      url: "https://drive.google.com/file/d/1mfkM-k4RbixuqWqgLwgr-kVa8HqXP9cb/view"
+    # - name: "cv"
+    #   url: "https://drive.google.com/file/d/1mfkM-k4RbixuqWqgLwgr-kVa8HqXP9cb/view"
 
   # text search
   fuseOpts:
