@@ -5,7 +5,7 @@ dateString: Oct 2020 - Dec 2020
 draft: false
 tags: ["Machine Learning", "Computer Vision", "TensorFlow", "Object Detection","OpenCV"]
 showToc: false
-weight: 301
+weight: 306
 --- 
 
 ### Description
