@@ -73,7 +73,7 @@ import warnings
 warnings.filterwarnings('ignore')
 ```
 
-### Loading the Dataset
+**Loading the Dataset**
 With all the libraries imported, let's load our dataset and start dabbling with the data!
 
 ```
@@ -135,9 +135,11 @@ df.dtypes
 On observing the output, we notice that only two of the columns `Number_of_vehicles_involved` and `Number_of_casualties` are numerical in nature whereas the others are of object type.
 
 **Summary Statistics of Categorical Features**
+
 By using the describe() function of pandas, we can generate the summary of the features.
 
-```df.describe()
+```
+df.describe()
 ```
 
 ```Output```
@@ -150,3 +152,59 @@ The *maximum number of causalities is 7* and the *maximum number of vehicles inv
 
 ## Phase 2 : Data Preprocessing
 
+**Are there any columns with missing values?**
+
+```
+df.isnull().any()
+```
+
+We can observe that most of he columns except `Time`,`Day_of_week`,`Age_band_of_driver`and `Sex_of_driver` has null values which needs to be processed.
+
+**How many values are missing in each feature?**
+
+```
+percent_missing = df.isnull().sum() * 100 / len(df)
+missing_value_df = pd.DataFrame({'column_name': df.columns,
+                                 'percent_missing': percent_missing})
+missing_value_df = missing_value_df.reset_index()
+```
+
+Additionally, let's check which features heve the maximum missing values : 
+
+```
+missing_value_df.head()
+```
+<img src = "/blog/road-traffic-accident-classification/missing.png">
+
+**Are there any outliers in the dataset?**
+
+```
+df.skew(axis=0)
+```
+**Output**
+```
+Number_of_vehicles_involved    1.323454
+Number_of_casualties           2.344769
+Casualty_severity             -2.893689
+```
+From the output we can observe that no conclusive measure of outliers can be derived from the dataset. 
+
+**Dabbling with the target feature : ```Accident_severity```**
+
+From this code snippet : ```df["Accident_severity"].unique()``` we can see that there are three main categories of our target variable : ```Slight Injury```,```Sever Injury``` and ```Fatal Injury```.
+
+**Big Question : Is there a class imbalance in the target feature ?!**
+
+The only way to find out is to plot a count plot.
+
+```
+ax = sns.countplot(y,label = 'Count')
+Slight_Injury,Serious_Injury,Fatal = y.value_counts()
+print("Slight Injury",Slight_Injury)
+print("Serious Injury",Serious_Injury)
+print("Fatal",Fatal)
+```
+**Output**
+<img src = "/blog/road-traffic-accident-classification/imbalance.png" height = 300 width = 300>
+
+We can see that there is class imbalance with over 10k values with `Slight_Injury` class and the other two classes have less than 15% values than the major class.
