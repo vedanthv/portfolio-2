@@ -41,6 +41,12 @@ params:
   ShowBreadCrumbs: true
   ShowCodeCopyButtons: true
   hideMeta: false
+  ShowShareButtons : true
+  # ShowReadingTime: true
+  ShowPostNavLinks: true  
+  ShowBreadCrumbs: true
+  comments: true
+
 
   # for enchanced SEO
   env: production
