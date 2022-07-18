@@ -208,3 +208,32 @@ print("Fatal",Fatal)
 <img src = "/blog/road-traffic-accident-classification/imbalance.png" height = 300 width = 300>
 
 We can see that there is class imbalance with over 10k values with `Slight_Injury` class and the other two classes have less than 15% values than the major class.
+
+**Question  : What is the Mean Number of Vehicles Involed and Causalities Grouped By Accident_severity?**
+
+```
+df.groupby('Accident_severity').mean()
+```
+**Output** : 
+<img src = "/blog/road-traffic-accident-classification/crosstab.png">
+
+**Question : What is the association between cause_of_accident and Accident_severity?**
+
+```
+pd.crosstab(df["Accident_severity"],df['Cause_of_accident'])
+```
+
+**Output :**
+
+<img src = "/blog/road-traffic-accident-classification/pivot.png">
+
+**Key observations from the above graphs**
+
+- Most Fatal injuries were caused by **Moving Backward**
+
+- Most Serious injuries were caused by **Changing Lane to the right**
+
+- Most Slight Injuries were caused by **No Distancing**
+
+## Phase 3 : Exploratory Data Visualization with Seaborn
+
