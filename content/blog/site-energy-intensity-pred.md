@@ -11,6 +11,12 @@ cover:
 
 # Overview
 
+## Important Links
+
+This is my [GitHub Repository](https://github.com/vedanthv/Site-Energy-Intensity-Prediction). It contains all the code mentioned in the blog, most importantly the helper functions which I request you to go through before reading the blog.
+
+The other important links(Resources,Kaggle Notebooks,Open Source Docs) is mentioned in the blog as and when its required!
+
 ## Abstract
 
 Climate change is a globally relevant, urgent, and multi-faceted issue heavily impacted by energy policy and infrastructure. Addressing climate change involves mitigation (i.e. mitigating greenhouse gas emissions) and adaptation (i.e. preparing for unavoidable consequences). Mitigation of GHG emissions requires changes to electricity systems, transportation, buildings, industry, and land use.
