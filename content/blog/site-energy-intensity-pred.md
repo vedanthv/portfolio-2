@@ -294,3 +294,12 @@ Here is the [code]("https://www.kaggle.com/code/schopenhacker75/feature-engineer
 
 For some post-processing, pseudo labelling and training on models not dependent on previous information, click [here](https://www.kaggle.com/mathurinache/part2-wids2022-model2-no-lag)
 
+# MLOps in Practice
+
+This section has three main components.
+
+* Building a Web Application with Streamlit
+* Deploying the web application on Microsoft Azure
+* Building Pipelines with Ploomber
+* Model Monitoring with MLFlow
+
