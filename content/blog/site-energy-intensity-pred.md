@@ -144,4 +144,16 @@ In this section, I perform cross validation.
 
 <img src = "/blog/site-energy-intensity-pred/feat_imp.PNG">
 
+### Final Models and Predictions
 
+#### Baseline RMSE calculation
+
+```
+avg_site_eui = [y_train.mean()] * len(y_train)
+rmse = mean_squared_error(y_train, avg_site_eui, squared=False)
+print('Baseline RMSE: %.3f' % (rmse))
+```
+
+The baseline RMSE I obtained was 0.57926. In the perfect world we cant get a RMSE of 0.0 but let's try to reduce it.
+
+### Trying Out Different Models
