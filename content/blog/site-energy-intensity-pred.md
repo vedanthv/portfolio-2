@@ -39,6 +39,8 @@ To make the code in the projects modular, I have used helper functions that incl
 
 ## Feature Engineering
 
+### Create Individual Datasets Based on Facility Types
+
 In this section I split the datasets into 12 individual ones based on facility types with similar `site_eui` characteristics.
 
 **Why I did this:**
