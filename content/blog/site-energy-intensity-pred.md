@@ -37,3 +37,30 @@ To make the code in the projects modular, I have used helper functions that incl
 
 * I have left the duplicates in the test set as otherwise, it could affect the predictions.
 
+## Feature Engineering
+
+In this section I split the datasets into 12 individual ones based on facility types with similar `site_eui` characteristics.
+
+**Why I did this:**
+- In this project, facility type was a feature that described what kind of facility a building was, and there were 60 total types.
+
+- When I was doing exploratory data analysis, I noticed that there were an uneven number of facilities of different types.
+
+- For example, there were 40k Multifamily buildings in the dataset, while other facility types such as Industrial only had a few hundred (or even less).
+
+- Further, the distribution of site energy usage for different facility types was drastically different than others, and certain feature distributions were different as well.
+
+- Therefore, it intuitively did not make sense to me to just train one machine learning model, since for example, how could a model trained with a significant portion of the data being related to Multifamily homes, make accurate predictions on other types where there was only 100 examples?
+
+- So my idea behind this was to create smaller datasets of similar buildings that had similar energy usage patterns and feature distributions, and then to use these to train individual machine learning models on each dataset, with the ultimate goal of getting more accurate predictions overall in the end.
+
+**How I did it:**
+- In developing the individual datasets I tried a bunch of things, including:
+    1. Naively grouping buildings based on the first word in their facility type, for example the types `Food_Sales` and `Food_Sales_Other` were grouped together in a dataset called `Food`.
+    2. Using KMeans clustering to cluster similar buildings together, and then group the buildings based on cluster labels.
+    3. Manually grouping buildings based on exploratory data analysis and iterating to optmize the Kaggle score
+
+**What worked best:**
+
+- In my final solution, I separate the train and test datasets into 12 individual data sets (each).
+- You can see the exact groups of facility types that I used by reading the `get_manual_facility_groups` function in the Helper Sections [2nd Section] of the Notebook 
