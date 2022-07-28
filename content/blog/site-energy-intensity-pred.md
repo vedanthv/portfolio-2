@@ -190,6 +190,27 @@ print('RMSE of random forest: %.3f' % (np.sqrt(cv_scores.mean())))
 ```
 RMSE I received for Random Forest Model is 0.42317
 
-### 
+#### XGBoost Model
 
+```
+xgb = XGBRegressor(n_estimators=2000, learning_rate=0.2)
+xgb.fit(X_train_lasso, y_train)
 
+rmse = mean_squared_error(y_val, y_pred, squared=False)
+print('RMSE of extreme gradient boosting: %.3f' % (rmse))
+```
+RMSE I received from XGBoost Model : 0.40337
+
+<img src = "https://c.tenor.com/QE05ueMty3AAAAAM/thor-best-you-can-do.gif" height = 600px width = 600px>
+
+#### Does CatBoost give any increase in performance?
+
+```
+# code for CatBoost
+from catboost import CatBoostRegressor
+
+from catboost import CatBoostRegressor
+model=CatBoostRegressor(iterations=50, depth=3, learning_rate=0.1, loss_function='RMSE')
+model.fit(X_train, y_train,eval_set=(X_val, y_val),plot=True)
+```
+Well the best RMSE I could get from CatBoost is 0.479, so we may have to look at ensembles to get the best out of the data!
