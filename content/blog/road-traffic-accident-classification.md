@@ -235,5 +235,4 @@ pd.crosstab(df["Accident_severity"],df['Cause_of_accident'])
 
 - Most Slight Injuries were caused by **No Distancing**
 
-## Phase 3 : Exploratory Data Visualization with Seaborn
-
+I'm going to cover the exploratory data analysis of the project in the upcoming post! Stay tuned!
