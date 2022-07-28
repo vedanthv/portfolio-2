@@ -9,29 +9,29 @@ cover:
     image: "/blog/site-energy-intensity-pred/cover.jpeg"
 ---
 
-## Overview
+# Overview
 
-### Abstract
+## Abstract
 
 Climate change is a globally relevant, urgent, and multi-faceted issue heavily impacted by energy policy and infrastructure. Addressing climate change involves mitigation (i.e. mitigating greenhouse gas emissions) and adaptation (i.e. preparing for unavoidable consequences). Mitigation of GHG emissions requires changes to electricity systems, transportation, buildings, industry, and land use.
 
 the lifecycle of buildings from construction to demolition were responsible for 37% of global energy-related and process-related CO2 emissions in 2020. Yet it is possible to drastically reduce the energy consumption of buildings by a combination of easy-to-implement fixes and state-of-the-art strategies.
 
-### Dataset
+## Dataset
 
 The WiDS Datathon dataset was created in collaboration with Climate Change AI (CCAI) and Lawrence Berkeley National Laboratory (Berkeley Lab). WiDS Datathon participants will analyze differences in building energy efficiency, creating models to predict building energy consumption. Participants will use a dataset consisting of variables that describe building characteristics and climate and weather variables for the regions in which the buildings are located. Accurate predictions of energy consumption can help policymakers target retrofitting efforts to maximize emissions reductions.
 
-### Brief Description of the Solution 
+## Brief Description of the Solution 
 
 > The project involves predicting a buildings Site Energy Usage Intensity metric, which was the `site_eui` feature in the dataset (regression problem).  To solve this problem, I first separated the dataset into twelve individual datasets based on buildings with similar `site_eui` usage patterns and other characteristics.  I then engineer features, perform leave one group out cross validation, and finally train an ensemble model (XGBoost, LightGBM, and CatBoost regressors) for each dataset on the most powerful features.  My final solution ended up in the top 10% of the final leaderboard.
 
-## Helper Functions
+# Helper Functions
 
 To make the code in the projects modular, I have used helper functions that include reusable code for **reading data**, **preprocessing tasks**, **feature engineering**, **cross validation** and **modelling**. Feel free to check out my [github](https://github.com/vedanthv/Site-Energy-Intensity-Prediction/blob/master/site-eui-pred-final.ipynb) repository for indepth docstrings of each function and post an [issue](https://github.com/vedanthv/Site-Energy-Intensity-Prediction/issues) if you want to report a bug for any of the functions.
 
-## Data Preprocessing
+# Data Preprocessing
 
-### Dealing with Duplicate Data
+## Dealing with Duplicate Data
 
 * We see that there are 39 duplicated buildings in the train set and 5 duplicate buildings in the test set. 
 
@@ -39,9 +39,9 @@ To make the code in the projects modular, I have used helper functions that incl
 
 * I have left the duplicates in the test set as otherwise, it could affect the predictions.
 
-## Feature Engineering
+# Feature Engineering
 
-### Create Individual Datasets Based on Facility Types
+## Create Individual Datasets Based on Facility Types
 
 In this section I split the datasets into 12 individual ones based on facility types with similar `site_eui` characteristics.
 
@@ -69,7 +69,7 @@ In this section I split the datasets into 12 individual ones based on facility t
 - In my final solution, I separate the train and test datasets into 12 individual data sets (each).
 - You can see the exact groups of facility types that I used by reading the `get_manual_facility_groups` function in the Helper Sections [2nd Section] of the notebook 
 
-## Missing Data
+# Missing Data
 
 In this section I identify what data is missing in the dataset:
 
@@ -87,7 +87,7 @@ In this section, I impute the missing data in the `energy_star_rating` and `year
 
 - Note that I have abstracted the actual code away into functions, which are included in Section 2 of the notebook.
 
-## Feature Engineering
+# Feature Engineering
 
 **PS : Turned Out to be the Most Important work in this project, more essential than the modelling!!**
 
@@ -108,9 +108,9 @@ Here are the features that were engineered from scratch.
 
 <img src = "/blog/site-energy-intensity-pred/new_feat.PNG">
 
-## Modelling
+# Modelling
 
-### Column Transformer
+## Column Transformer
 
 A few things to note on the final column transformer:
 
@@ -122,7 +122,7 @@ A few things to note on the final column transformer:
 
 Please refer my notebook for the code.
 
-### Cross Validation
+## Cross Validation
 
 In this section, I perform cross validation.
 
@@ -136,7 +136,7 @@ In this section, I perform cross validation.
 
 <img src = "/blog/site-energy-intensity-pred/meancv.PNG">
 
-### Feature Importance
+## Feature Importance
 
 - I plot the feature importance graphs from the lightGBM regressor models.
 
@@ -146,9 +146,9 @@ In this section, I perform cross validation.
 
 <img src = "/blog/site-energy-intensity-pred/feat_imp.PNG">
 
-### Final Models and Predictions
+## Final Models and Predictions
 
-#### Baseline RMSE calculation
+### Baseline RMSE calculation
 
 ```
 avg_site_eui = [y_train.mean()] * len(y_train)
@@ -158,9 +158,9 @@ print('Baseline RMSE: %.3f' % (rmse))
 
 The baseline RMSE I obtained was 0.57926. In the perfect world we cant get a RMSE of 0.0 but let's try to reduce it.
 
-### Trying Out Different Models
+## Trying Out Different Models
 
-#### Linear Regression
+### Linear Regression
 
 ```
 from sklearn.linear_model import LinearRegression
@@ -172,7 +172,7 @@ RMSE for Linear Regression I received is 0.47339
 
 This is better than the baseline model! Let's explore more models :)
 
-#### Random Forest Model
+### Random Forest Model
 
 ```
 rf = RandomForestRegressor()
@@ -192,7 +192,7 @@ print('RMSE of random forest: %.3f' % (np.sqrt(cv_scores.mean())))
 ```
 RMSE I received for Random Forest Model is 0.42317
 
-#### XGBoost Model
+### XGBoost Model
 
 ```
 xgb = XGBRegressor(n_estimators=2000, learning_rate=0.2)
@@ -205,7 +205,7 @@ RMSE I received from XGBoost Model : 0.40337
 
 <img src = "https://c.tenor.com/QE05ueMty3AAAAAM/thor-best-you-can-do.gif" height = 600px width = 600px>
 
-#### Does CatBoost give any increase in performance?
+### Does CatBoost give any increase in performance?
 
 ```
 # code for CatBoost
@@ -217,7 +217,7 @@ model.fit(X_train, y_train,eval_set=(X_val, y_val),plot=True)
 ```
 Well the best RMSE I could get from CatBoost is 0.479, so we may have to look at ensembles to get the best out of the data!
 
-#### Ensemble of Boosting Models
+### Ensemble of Boosting Models
 
 - The final model I used was an ensemble of XGB, lightGBM, and CatBoost regressors.
 - You will need to use a GPU to run this section of the notebook, or, comment out the GPU code lines (although this will take a long time if you only use a CPU).
@@ -228,23 +228,23 @@ Please have a look at the [notebook](https://github.com/vedanthv/Site-Energy-Int
 
 So I got the best RMSE score of 0.11 with the ensemble model. I did not notice any overfit[variance] or underfit[bias] whilst plotting the bias and variance curves but please DM on Twitter or LinkedIn [links in the home page] if you notice any overfit or underfit. You can also raise an [issue](https://github.com/vedanthv/Site-Energy-Intensity-Prediction/issues) on my GitHub repository.
 
-## Possible Improvements and Better Performance🤔
+# Possible Improvements and Better Performance🤔
 
-### Kaggle Solutions Overview
+## Kaggle Solutions Overview
 
-#### First Place Solution Overview
+### First Place Solution Overview
 
 This was a great solution that included amazing feature engineering strategies and modelling. Read the discussions post by [jayjay](https://www.kaggle.com/jayjay75) [here](https://www.kaggle.com/competitions/widsdatathon2022/discussion/310522)
 
-##### Summary of the Approach
+#### Summary of the Approach
 
 * Main solution was based around finding the **previous history of the buildings**. Since the dataset did not have enough information about the past performance, features were engineered to calculate the past information. Bagging and regression turned out to be efficient in this case.
 
 * Hundreds of other models were built with test set that didnt have previous information, LAG[don't worry I'll explain this in a bit!] features would not be useful in this case so pseudo labelling from the above point was used.
 
-##### How was feature engineering leveraged?
+### How was feature engineering leveraged?
 
-###### Weather Based Features 
+#### Weather Based Features 
 
 * Statistical information like the mean,median, average and skew of temperatures was engineered.
 
@@ -258,7 +258,7 @@ But what did I not do?
 
 **Leverage LAG based features!**
 
-###### LAG Based Features
+#### LAG Based Features
 
 **What are lag based features?** : a lagged variable has its value coming from an earlier point in time.
 
