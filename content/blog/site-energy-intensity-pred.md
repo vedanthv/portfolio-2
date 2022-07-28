@@ -229,3 +229,15 @@ Please have a look at the [notebook](https://github.com/vedanthv/Site-Energy-Int
 So I got the best RMSE score of 0.11 with the ensemble model. I did not notice any overfit[variance] or underfit[bias] whilst plotting the bias and variance curves but please DM on Twitter or LinkedIn [links in the home page] if you notice any overfit or underfit. You can also raise an [issue](https://github.com/vedanthv/Site-Energy-Intensity-Prediction/issues) on my GitHub repository.
 
 ## Possible Improvements and Better Performance🤔
+
+### Kaggle Solutions Overview
+
+#### First Place Solution Overview
+
+This was a great solution that included amazing feature engineering strategies and modelling. Read the discussions post by [jayjay](https://www.kaggle.com/jayjay75) [here](https://www.kaggle.com/competitions/widsdatathon2022/discussion/310522)
+
+Here is a summary of the solution.
+
+* Main solution was based around finding the **previous history of the buildings**. Since the dataset did not have enough information about the past performance, features were engineered to calculate the past information. Bagging and regression turned out to be efficient in this case.
+
+* Hundreds of other models were built with test set that didnt have previous information, LAG[don't worry I'll explain this in a bit!] features would not be useful in this case so pseudo labelling from the above point was used.
