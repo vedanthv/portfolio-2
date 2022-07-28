@@ -1,6 +1,6 @@
 ---
 title: "Site Energy Intensity Prediction - WiDS 2022 Hackathon"
-description: "My top 10% Solution Approach for Site Energy Intensity Prediction Project which was part of the WiDS 2022 Kaggle Hackathon"
+description: "My Solution Approach for Site Energy Intensity Prediction Project which was part of the WiDS 2022 Kaggle Hackathon"
 dateString: July 2022
 draft: false
 tags: ["ML", "Python", "Projects", "Climate Change AI","Energy Projects"]
@@ -16,7 +16,6 @@ cover:
 This is my [GitHub Repository](https://github.com/vedanthv/Site-Energy-Intensity-Prediction). It contains all the code mentioned in the blog, most importantly the helper functions which I request you to go through before reading the blog.
 
 The other important links(Resources,Kaggle Notebooks,Open Source Docs) is mentioned in the blog as and when its required!
-
 ## Abstract
 
 Climate change is a globally relevant, urgent, and multi-faceted issue heavily impacted by energy policy and infrastructure. Addressing climate change involves mitigation (i.e. mitigating greenhouse gas emissions) and adaptation (i.e. preparing for unavoidable consequences). Mitigation of GHG emissions requires changes to electricity systems, transportation, buildings, industry, and land use.
@@ -234,7 +233,7 @@ Please have a look at the [notebook](https://github.com/vedanthv/Site-Energy-Int
 
 So I got the best RMSE score of 0.11 with the ensemble model. I did not notice any overfit[variance] or underfit[bias] whilst plotting the bias and variance curves but please DM on Twitter or LinkedIn [links in the home page] if you notice any overfit or underfit. You can also raise an [issue](https://github.com/vedanthv/Site-Energy-Intensity-Prediction/issues) on my GitHub repository.
 
-## Possible Improvements and Better Performance
+# Possible Improvements and Better Performance
 
 ## Kaggle Solutions Overview
 
@@ -248,9 +247,9 @@ This was a great solution that included amazing feature engineering strategies a
 
 * Hundreds of other models were built with test set that didnt have previous information, LAG[don't worry I'll explain this in a bit!] features would not be useful in this case so pseudo labelling from the above point was used.
 
-### How was feature engineering leveraged?
+#### How was feature engineering leveraged?
 
-#### Weather Based Features 
+##### Weather Based Features 
 
 * Statistical information like the mean,median, average and skew of temperatures was engineered.
 
@@ -266,7 +265,7 @@ But what did I not do?
 
 **Leverage LAG based features!**
 
-#### LAG Based Features
+##### LAG Based Features
 
 **What are lag based features?** : a lagged variable has its value coming from an earlier point in time.
 
@@ -280,7 +279,7 @@ The following lag based features were calculated in the solution.
 
 Here is the [code](https://www.kaggle.com/code/schopenhacker75/feature-engineering-catboost?scriptVersionId=89051266&cellId=19) for these features.
 
-#### Rolling Based Features
+##### Rolling Based Features
 
 Rolling Based Features: it consists in computing some statistical values (sum/mean..) for our target variables within a rolling window.
 
@@ -290,7 +289,7 @@ Example : **Moving average, over the last 1/2/3 years of the energy rating of th
 
 Here is the [code](https://www.kaggle.com/code/schopenhacker75/feature-engineering-catboost?scriptVersionId=89051266&cellId=22) for the moving average calculation.
 
-#### Delta Based features
+##### Delta Based features
 
 Features extracted from the difference / variance / derivative of current value vs previous values were applied.
 
@@ -306,15 +305,15 @@ This section has five main components.
 
 * Building a Web Application with Streamlit
 
-* Deploying the Web Application on Microsoft Azure
-
 * Building Pipelines with Ploomber
 
 * Model Monitoring with MLFlow
 
 * Explanable AI and Model Interpretability with SHAP
 
-## Building a Web Application on Streamlit
+## Streamlit
+
+### Why and What?
 
 * Streamlit is a Python based library that helps us build Data Based Web Applications fast and share them.
 * Streamlit is entirely based in Python and need no prior frontend knowledge to build a web application.
@@ -332,3 +331,9 @@ Heroku is a pouplar platform to launch and deploy data apps, but I prefer Micros
 > * requirements.txt : text file that contains the name and version of the libraries that you are using in the project. Streamlit automatically imports them while running the application.
 > * setup.sh : This script is a set of 'command line like statements' that specifies the toml config file, which acts like a 'settings' folder for your application
 > * procfile : It specifies instructions to run the streamlit app. Notice that the shell file has to run first before executing the application.
+
+The application should look like this if you have it running on your system. 
+
+<img src = "/blog/site-energy-intensity-pred/app.PNG">
+
+> **Disclaimer : This project was done in July '22. If you are reading it sometime in the future, please make sure Streamlit and boosting libraries(catboost,xgboost,lightgbm) are of compatible versions with Streamlit!**
