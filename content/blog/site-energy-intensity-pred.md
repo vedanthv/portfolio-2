@@ -223,3 +223,5 @@ Well the best RMSE I could get from CatBoost is 0.479, so we may have to look at
 PS. Running the model mlutiple times gives an error on the predictions after the 3rd decimal place, not sure why this happens even after random seed. I'll update the blog if I find out.
 
 Please have a look at the [notebook](https://github.com/vedanthv/Site-Energy-Intensity-Prediction/blob/master/site-eui-pred-final.ipynb) for the code!
+
+So I got the best RMSE score of 0.11 with the ensemble model. I did not notice any overfit[variance] or underfit[bias] whilst plotting the bias and variance curves but please DM on Twitter or LinkedIn [links in the footer] if you notice any overfit or underfit. You can also raise an [issue](https://github.com/vedanthv/Site-Energy-Intensity-Prediction/issues) 
