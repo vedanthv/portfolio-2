@@ -72,7 +72,18 @@ In this section I split the datasets into 12 individual ones based on facility t
 In this section I identify what data is missing in the dataset:
 
 - We'll see that features related to fog or wind, have over 50% of the data missing in both the train and test set, and due to this, I don't use these features in my final solution.
+
 - We'll also see that there is missing data in energy star rating and year built, which I deal with in the next section of this blog.
+
+In this section, I impute the missing data in the `energy_star_rating` and `year_built` features:
+- I use Ridge regression to impute the missing values, as I found this gave me the best results in terms of optimizing the final score of my solution.
+
+- I also tried using XGBoost and LightGBM models to impute, but these did not do as well.
+- First, I create a sklearn `ColumnTransformer` which one hot encodes the categorical features I used for imputation, as well as removes features that I do not use for imputation.
+
+- Then, I use sklearn's `IterativeImputer` to impute the missing data.
+
+- Note that I have abstracted the actual code away into functions, which are included in Section 2 of the notebook.
 
 
 
