@@ -324,5 +324,11 @@ For a quick brushup if you want to build applications from the get go, read this
 
 Here is the [complete code](https://github.com/vedanthv/Site-Energy-Intensity-Prediction/blob/master/app.py) with comments for the Streamlit Web App that I have developed. If you have grasped the concepts in the resources above, this code should be easily comprehendable.
 
+### Deplying the App On Heroku
 
+Heroku is a pouplar platform to launch and deploy data apps, but I prefer Microsoft Azure as it gives flexibility and website monitoring tools as well. However if you would like to deploy on Heroku, here are the [six steps](https://towardsdatascience.com/a-quick-tutorial-on-how-to-deploy-your-streamlit-app-to-heroku-874e1250dadd) you should follow.
 
+> Aside : There is always a confusion about Procfiles, requirements.txt and setup.sh scripts while setting up Heroku Deployment. Here are one line explanations of these : 
+> * requirements.txt : text file that contains the name and version of the libraries that you are using in the project. Streamlit automatically imports them while running the application.
+> * setup.sh : This script is a set of 'command line like statements' that specifies the toml config file, which acts like a 'settings' folder for your application
+> * procfile : It specifies instructions to run the streamlit app. Notice that the shell file has to run first before executing the application.
