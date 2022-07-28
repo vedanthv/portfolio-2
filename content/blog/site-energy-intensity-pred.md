@@ -255,3 +255,10 @@ Here is a summary of the solution.
 If you notice the code and the features I engineered, you can see that all these parameters were used to create new features.
 
 But what did I not do? **Leverage LAG based features!**
+
+**What are lag based features?** : a lagged variable has its value coming from an earlier point in time.
+
+For example : **What was the Energy Usage Intensity of the building one, two or three years ago?**
+
+
+
