@@ -157,3 +157,16 @@ print('Baseline RMSE: %.3f' % (rmse))
 The baseline RMSE I obtained was 0.57926. In the perfect world we cant get a RMSE of 0.0 but let's try to reduce it.
 
 ### Trying Out Different Models
+
+#### Linear Regression
+
+```
+from sklearn.linear_model import LinearRegression
+reg = LinearRegression()
+reg.fit(X_train_lasso, y_train)
+LinearRegression()
+```
+RMSE for Linear Regression I received is 0.47339
+
+This is better than the baseline model! Let's explore more models :)
+
