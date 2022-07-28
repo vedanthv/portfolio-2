@@ -85,7 +85,7 @@ In this section, I impute the missing data in the `energy_star_rating` and `year
 
 - Note that I have abstracted the actual code away into functions, which are included in Section 2 of the notebook.
 
-## Section 4: Feature Engineering
+## Feature Engineering
 
 In this section I perform feature engineering and add many features to the data:
 - I've abstracted all the code away into functions, please see Section 2 of this notebook for the actual code.
