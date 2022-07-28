@@ -299,9 +299,7 @@ Here is the [code]("https://www.kaggle.com/code/schopenhacker75/feature-engineer
 
 For some post-processing, pseudo labelling and training on models not dependent on previous information, click [here](https://www.kaggle.com/mathurinache/part2-wids2022-model2-no-lag)
 
-# MLOps in Practice
-
-This section has five main components.
+Thanks for reading so far folks! I will be writing a second part on **MLOps Implementation** of this project covering the five aspects give below. Stay tuned! 
 
 * Building a Web Application with Streamlit
 
@@ -309,9 +307,9 @@ This section has five main components.
 
 * Model Monitoring with MLFlow
 
-* Explanable AI and Model Interpretability with SHAP
+* Explanable AI and Model Interpretability with LIME and SHAP
 
-## Streamlit
+<!-- ## Streamlit
 
 ### Why and What?
 
@@ -336,4 +334,4 @@ The application should look like this if you have it running on your system.
 
 <img src = "/blog/site-energy-intensity-pred/app.PNG">
 
-> **Disclaimer : This project was done in July '22. If you are reading it sometime in the future, please make sure Streamlit and boosting libraries(catboost,xgboost,lightgbm) are of compatible versions with Streamlit!**
+> **Disclaimer : This project was done in July '22. If you are reading it sometime in the future, please make sure Streamlit and boosting libraries(catboost,xgboost,lightgbm) are of compatible versions with Streamlit!** -->
