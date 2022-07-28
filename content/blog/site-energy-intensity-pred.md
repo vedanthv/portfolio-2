@@ -241,3 +241,17 @@ Here is a summary of the solution.
 * Main solution was based around finding the **previous history of the buildings**. Since the dataset did not have enough information about the past performance, features were engineered to calculate the past information. Bagging and regression turned out to be efficient in this case.
 
 * Hundreds of other models were built with test set that didnt have previous information, LAG[don't worry I'll explain this in a bit!] features would not be useful in this case so pseudo labelling from the above point was used.
+
+**How was feature engineering leveraged?**
+
+1. Weather Based Feature Extraction 
+
+* Statistical information like the mean,median, average and skew of temperatures was engineered.
+
+* Season based binning was done and statistical parameters were extracted for each season.
+
+* For the heating and cooling days, the statistical params / year was extracted and added as features.
+
+If you notice the code and the features I engineered, you can see that all these parameters were used to create new features.
+
+But what did I not do? **Leverage LAG based features!**
