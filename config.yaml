@@ -69,7 +69,7 @@ params:
   # cover image for posts
   cover:
     hiddenInList: true # hide on list pages and home
-    hiddenInSingle: false # hide on single page
+    hiddenInSingle: true # hide on single page
 
   socialIcons:
     - name: "email"
