@@ -214,3 +214,12 @@ model=CatBoostRegressor(iterations=50, depth=3, learning_rate=0.1, loss_function
 model.fit(X_train, y_train,eval_set=(X_val, y_val),plot=True)
 ```
 Well the best RMSE I could get from CatBoost is 0.479, so we may have to look at ensembles to get the best out of the data!
+
+#### Ensemble of Boosting Models
+
+- The final model I used was an ensemble of XGB, lightGBM, and CatBoost regressors.
+- You will need to use a GPU to run this section of the notebook, or, comment out the GPU code lines (although this will take a long time if you only use a CPU).
+
+PS. Running the model mlutiple times gives an error on the predictions after the 3rd decimal place, not sure why this happens even after random seed. I'll update the blog if I find out.
+
+Please have a look at the [notebook](https://github.com/vedanthv/Site-Energy-Intensity-Prediction/blob/master/site-eui-pred-final.ipynb) for the code!
