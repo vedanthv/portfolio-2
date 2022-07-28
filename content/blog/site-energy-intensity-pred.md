@@ -132,6 +132,5 @@ In this section, I perform cross validation.
 
 - The mean cross validation scores for each grouped dataset are included below, we can see that for some groups, the train and validation scores are quite good, except for a few, namely `Food_Grocery`, `Health`, and `Laboratory_Data`.
 
-
-
+<img src = "/blog/site-energy-intensity-pred/meancv.PNG">
 
