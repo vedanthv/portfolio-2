@@ -300,17 +300,27 @@ Here is the [code]("https://www.kaggle.com/code/schopenhacker75/feature-engineer
 
 For some post-processing, pseudo labelling and training on models not dependent on previous information, click [here](https://www.kaggle.com/mathurinache/part2-wids2022-model2-no-lag)
 
-# MLOps in Practice [Coming Soon!] 
+# MLOps in Practice
 
-This section has three main components.
+This section has five main components.
 
 * Building a Web Application with Streamlit
 
-* Deploying the web application on Microsoft Azure
+* Deploying the Web Application on Microsoft Azure
 
 * Building Pipelines with Ploomber
 
 * Model Monitoring with MLFlow
 
 * Explanable AI and Model Interpretability with SHAP
+
+## Building a Web Application on Streamlit
+
+* Streamlit is a Python based library that helps us build Data Based Web Applications fast and share them.
+* Streamlit is entirely based in Python and need no prior frontend knowledge to build a web application.
+* Check out this [link](https://docs.streamlit.io/library/get-started) to learn more about Streamlit and here are a few [code examples](https://streamlit.io/gallery) built on Streamlit.
+
+For a quick brushup if you want to build applications from the get go, read this [article](https://www.analyticsvidhya.com/blog/2021/06/build-web-app-instantly-for-machine-learning-using-streamlit/)[**recommended to read to understand my code**]
+
+
 
