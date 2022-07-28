@@ -134,3 +134,14 @@ In this section, I perform cross validation.
 
 <img src = "/blog/site-energy-intensity-pred/meancv.PNG">
 
+### Feature Importance
+
+- I plot the feature importance graphs from the lightGBM regressor models.
+
+- I only include an example for the four `2to4_5plus_Mixed` models that resulted from the cross validation process, otherwise there would be too many plots to look at in this notebook.
+
+- We'll see that in each fold the grouped median features and interaction features with `energy_star_rating` are the most important
+
+<img src = "/blog/site-energy-intensity-pred/feat_imp.PNG">
+
+
