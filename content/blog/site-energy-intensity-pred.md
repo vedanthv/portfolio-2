@@ -65,4 +65,14 @@ In this section I split the datasets into 12 individual ones based on facility t
 **What worked best:**
 
 - In my final solution, I separate the train and test datasets into 12 individual data sets (each).
-- You can see the exact groups of facility types that I used by reading the `get_manual_facility_groups` function in the Helper Sections [2nd Section] of the Notebook 
+- You can see the exact groups of facility types that I used by reading the `get_manual_facility_groups` function in the Helper Sections [2nd Section] of the notebook 
+
+## Missing Data
+
+In this section I identify what data is missing in the dataset:
+
+- We'll see that features related to fog or wind, have over 50% of the data missing in both the train and test set, and due to this, I don't use these features in my final solution.
+- We'll also see that there is missing data in energy star rating and year built, which I deal with in the next section of this blog.
+
+
+
