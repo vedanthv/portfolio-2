@@ -284,4 +284,13 @@ Example : **Moving average, over the last 1/2/3 years of the energy rating of th
 
 Here is the [code](https://www.kaggle.com/code/schopenhacker75/feature-engineering-catboost?scriptVersionId=89051266&cellId=22) for the moving average calculation.
 
+#### Delta Based features
+
+Features extracted from the difference / variance / derivative of current value vs previous values were applied.
+
+**For Example : we extracted the evolution rate of the Site Energy Comsumption from year-2 to year-1 then we constructed a new feature by multiplying this rate by the value of year-1.**
+
+Here is the [code]("https://www.kaggle.com/code/schopenhacker75/feature-engineering-catboost?scriptVersionId=89051266&cellId=24") for the delta based features.
+
+
 
