@@ -274,3 +274,14 @@ The following lag based features were calculated in the solution.
 
 Here is the [code](https://www.kaggle.com/code/schopenhacker75/feature-engineering-catboost?scriptVersionId=89051266&cellId=19) for these features.
 
+#### Rolling Based Features
+
+Rolling Based Features: it consists in computing some statistical values (sum/mean..) for our target variables within a rolling window.
+
+This method is called the rolling window method because the window would be different for every data point.
+
+Example : **Moving average, over the last 1/2/3 years of the energy rating of the building**
+
+Here is the [code](https://www.kaggle.com/code/schopenhacker75/feature-engineering-catboost?scriptVersionId=89051266&cellId=22) for the moving average calculation.
+
+
