@@ -120,3 +120,18 @@ A few things to note on the final column transformer:
 
 Please refer my notebook for the code.
 
+### Cross Validation
+
+In this section, I perform cross validation.
+
+- In the interest of speed, I used an out of the box light GBM regressor to perform five fold leave one group out cross validation ("LOGO cv").
+
+- I performed LOGO cv based on the `year_factor` column in the dataset - in other words I trained and predicted on separate year groups, for example one fold would train on years 1 to 5, then predict on 6.
+
+- I did this since the test dataset only included buildings from year 7, so I was trying to emulate this in cross validation by leaving one year out.  In a perfect world with more time, I would have also tried a fancier time series cross validation method.
+
+- The mean cross validation scores for each grouped dataset are included below, we can see that for some groups, the train and validation scores are quite good, except for a few, namely `Food_Grocery`, `Health`, and `Laboratory_Data`.
+
+
+
+
