@@ -234,7 +234,7 @@ Please have a look at the [notebook](https://github.com/vedanthv/Site-Energy-Int
 
 So I got the best RMSE score of 0.11 with the ensemble model. I did not notice any overfit[variance] or underfit[bias] whilst plotting the bias and variance curves but please DM on Twitter or LinkedIn [links in the home page] if you notice any overfit or underfit. You can also raise an [issue](https://github.com/vedanthv/Site-Energy-Intensity-Prediction/issues) on my GitHub repository.
 
-# Possible Improvements and Better Performance🤔
+## Possible Improvements and Better Performance
 
 ## Kaggle Solutions Overview
 
