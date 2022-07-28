@@ -266,4 +266,11 @@ But what did I not do?
 
 For example : **What was the Energy Usage Intensity of the building one, two or three years ago?**
 
+The following lag based features were calculated in the solution.
+* site_eui
+* energy_star
+* ELEVATION
+* temp features
+
+Here is the [code](https://www.kaggle.com/code/schopenhacker75/feature-engineering-catboost?scriptVersionId=89051266&cellId=19) for these features.
 
