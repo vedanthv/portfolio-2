@@ -252,6 +252,8 @@ This was a great solution that included amazing feature engineering strategies a
 
 * For the heating and cooling days, the statistical params / year was extracted and added as features.
 
+* Here is the [link](https://www.kaggle.com/code/schopenhacker75/feature-engineering-catboost?scriptVersionId=89051266&cellId=14) to the weather based features code.
+
 If you notice the code and the features I engineered, you can see that all these parameters were used to create new features.
 
 But what did I not do? 
@@ -263,6 +265,5 @@ But what did I not do?
 **What are lag based features?** : a lagged variable has its value coming from an earlier point in time.
 
 For example : **What was the Energy Usage Intensity of the building one, two or three years ago?**
-
 
 
