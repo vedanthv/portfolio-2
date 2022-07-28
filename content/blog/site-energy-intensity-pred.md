@@ -105,3 +105,18 @@ In this section I perform feature engineering and add many features to the data:
 Here are the features that were engineered from scratch.
 
 <img src = "/blog/site-energy-intensity-pred/new_feat.PNG">
+
+## Modelling
+
+### Column Transformer
+
+A few things to note on the final column transformer:
+
+- You'll notice only a subset of features are used in the final model, and the majority of features are actually dropped.
+
+- There were no categorical features used in my final solution.
+
+- All features were numeric, and the only further preprocessing was to standardize them (not required for tree based learning, but can slightly improve performance).
+
+Please refer my notebook for the code.
+
