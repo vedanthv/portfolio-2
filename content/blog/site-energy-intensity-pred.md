@@ -322,5 +322,7 @@ This section has five main components.
 
 For a quick brushup if you want to build applications from the get go, read this [article](https://www.analyticsvidhya.com/blog/2021/06/build-web-app-instantly-for-machine-learning-using-streamlit/)[**recommended to read to understand my code**]
 
+Here is the [complete code](https://github.com/vedanthv/Site-Energy-Intensity-Prediction/blob/master/app.py) with comments for the Streamlit Web App that I have developed. If you have grasped the concepts in the resources above, this code should be easily comprehendable.
+
 
 
