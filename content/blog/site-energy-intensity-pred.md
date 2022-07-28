@@ -27,3 +27,13 @@ The WiDS Datathon dataset was created in collaboration with Climate Change AI (C
 
 To make the code in the projects modular, I have used helper functions that include reusable code for **reading data**, **preprocessing tasks**, **feature engineering**, **cross validation** and **modelling**. Feel free to check out my [github](https://github.com/vedanthv/Site-Energy-Intensity-Prediction/blob/master/site-eui-pred-final.ipynb) repository for indepth docstrings of each function and post an [issue](https://github.com/vedanthv/Site-Energy-Intensity-Prediction/issues) if you want to report a bug for any of the functions.
 
+## Data Preprocessing
+
+### Dealing with Duplicate Data
+
+* We see that there are 39 duplicated buildings in the train set and 5 duplicate buildings in the test set. 
+
+* Since the number of duplicates is very less compared to the 75k samples in the dataset, I have removed the duplicates.
+
+* I have left the duplicates in the test set as otherwise, it could affect the predictions.
+
