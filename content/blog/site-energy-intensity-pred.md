@@ -87,6 +87,8 @@ In this section, I impute the missing data in the `energy_star_rating` and `year
 
 ## Feature Engineering
 
+**PS : Turned Out to be the Most Important work in this project, more essential than the modelling!!**
+
 In this section I perform feature engineering and add many features to the data:
 - I've abstracted all the code away into functions, please see Section 2 of this notebook for the actual code.
 
@@ -100,3 +102,6 @@ In this section I perform feature engineering and add many features to the data:
 
 - This would suggest that a buildings prior site energy usage reading can be used as a key predictor in predicting it's future energy usage (similar to pure time series data).
 
+Here are the features that were engineered from scratch.
+
+<img src = "/blog/site-energy-intensity-pred/new_feat.PNG">
