@@ -1,5 +1,5 @@
 ---
-title: "🚦An End to End Project on Road Traffic Accident Severity Classification"
+title: "🚦An End to End Project on Road Traffic Accident Severity Classification - Part 1/n"
 description: "An end to end ML Solution to classify severity of road accidents using real world accident data"
 dateString: July 2022
 draft: false
