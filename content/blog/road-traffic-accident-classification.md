@@ -4,7 +4,7 @@ description: "An end to end ML Solution to classify severity of road accidents u
 dateString: July 2022
 draft: false
 tags: ["ML", "Python", "Projects"]
-weight: 101
+weight: 102
 cover:
     image: "/blog/road-traffic-accident-classification/cover.jpeg"
 ---
