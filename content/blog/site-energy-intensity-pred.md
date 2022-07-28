@@ -336,4 +336,3 @@ The application should look like this if you have it running on your system.
 
 <img src = "/blog/site-energy-intensity-pred/app.PNG">
 
-> **Disclaimer : This project was done in July '22. If you are reading it sometime in the future, please make sure Streamlit and boosting libraries(catboost,xgboost,lightgbm) are of compatible versions with Streamlit!**
