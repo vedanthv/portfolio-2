@@ -170,3 +170,26 @@ RMSE for Linear Regression I received is 0.47339
 
 This is better than the baseline model! Let's explore more models :)
 
+#### Random Forest Model
+
+```
+rf = RandomForestRegressor()
+
+cv = RepeatedKFold(n_splits=5, n_repeats=3, random_state=42)
+
+cv_scores = cross_val_score(rf, X_train_lasso, y_train, 
+                           scoring='neg_mean_squared_error', cv=cv, 
+                           n_jobs=-1, error_score='raise', verbose=1)
+```
+
+**RMSE Score for Random Forest Model:**
+
+```
+cv_scores = np.absolute(cv_scores)
+print('RMSE of random forest: %.3f' % (np.sqrt(cv_scores.mean())))
+```
+RMSE I received for Random Forest Model is 0.42317
+
+### 
+
+
