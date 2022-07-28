@@ -236,15 +236,15 @@ So I got the best RMSE score of 0.11 with the ensemble model. I did not notice a
 
 This was a great solution that included amazing feature engineering strategies and modelling. Read the discussions post by [jayjay](https://www.kaggle.com/jayjay75) [here](https://www.kaggle.com/competitions/widsdatathon2022/discussion/310522)
 
-Here is a summary of the solution.
+##### Summary of the Approach
 
 * Main solution was based around finding the **previous history of the buildings**. Since the dataset did not have enough information about the past performance, features were engineered to calculate the past information. Bagging and regression turned out to be efficient in this case.
 
 * Hundreds of other models were built with test set that didnt have previous information, LAG[don't worry I'll explain this in a bit!] features would not be useful in this case so pseudo labelling from the above point was used.
 
-**How was feature engineering leveraged?**
+##### How was feature engineering leveraged?
 
-1. Weather Based Feature Extraction 
+###### Weather Based Features 
 
 * Statistical information like the mean,median, average and skew of temperatures was engineered.
 
@@ -254,7 +254,11 @@ Here is a summary of the solution.
 
 If you notice the code and the features I engineered, you can see that all these parameters were used to create new features.
 
-But what did I not do? **Leverage LAG based features!**
+But what did I not do? 
+
+**Leverage LAG based features!**
+
+###### LAG Based Features
 
 **What are lag based features?** : a lagged variable has its value coming from an earlier point in time.
 
