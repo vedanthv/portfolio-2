@@ -85,5 +85,18 @@ In this section, I impute the missing data in the `energy_star_rating` and `year
 
 - Note that I have abstracted the actual code away into functions, which are included in Section 2 of the notebook.
 
+## Section 4: Feature Engineering
 
+In this section I perform feature engineering and add many features to the data:
+- I've abstracted all the code away into functions, please see Section 2 of this notebook for the actual code.
+
+- In total, I engineer 28 new features, for which the names of each are included below.
+
+- `median_facility_floor_site_eui`, `median_facility_year_site_eui`, and `median_facility_floor_year_site_eui` were the most powerful features for prediction.
+
+- These features worked by concatenating a combination of the features `facility_type`, `floor_area`, and/or `year_built`, and then encoding them with a grouped median value of the target `site_eui`
+
+- I thought that this would cause data leakage, since we are encoding the target variable as a feature (and in a sense, just identifying exact buildings in the dataset and using past `site_eui` to predict future `site_eui`, but in the end these three features were the most powerful in my entire notebook.
+
+- This would suggest that a buildings prior site energy usage reading can be used as a key predictor in predicting it's future energy usage (similar to pure time series data).
 
