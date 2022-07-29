@@ -301,6 +301,6 @@ For some post-processing, pseudo labelling and training on models not dependent 
 
 # Conclusion 
 
-Thanks for reading this post! This was a great project to work on and hope that you found it helpful. Thanks
+Thanks for reading this post! This was a great project to work on and hope that you found it helpful.
 
 Feel free to email me at vedanthvbaliga [at] gmail [dot] com for internship oppurtunities and ML discussions in general
