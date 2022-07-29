@@ -299,4 +299,8 @@ Here is the [code]("https://www.kaggle.com/code/schopenhacker75/feature-engineer
 
 For some post-processing, pseudo labelling and training on models not dependent on previous information, click [here](https://www.kaggle.com/mathurinache/part2-wids2022-model2-no-lag)
 
-Thanks for reading this post! Feel free to email me at vedanthvbaliga [at] gmail [dot] com for internship oppurtunities and ML discussions in general
+## Conclusion 
+
+Thanks for reading this post! This was a great project to work on and hope that you found it helpful. Thanks
+
+Feel free to email me at vedanthvbaliga [at] gmail [dot] com for internship oppurtunities and ML discussions in general
