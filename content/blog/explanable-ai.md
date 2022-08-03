@@ -65,6 +65,14 @@ I'm confident you have understood the nuance of marginal contributions now! Here
 
 In my previous post on [Predicting the Energy Units consumed by a Building](https://vedanthvbaliga.netlify.app/blog/site-energy-intensity-pred/) I explained the entire solution from Data Preprocessing, Feature Engineering and Model Building. Let's extend our understanding of the model by integrating Explanable AI in the project.
 
+## Tools and Techniques
 
+I'm going to use three of the main techniques that are used on a large scale for model interpretability. 
+
+- Permutation Importance
+- Shapley Values
+- LIME
+
+As we proceed with each of these techniques, we will also understand the situations where each of there will be useful, their advantages and disadvantages.
 
 
