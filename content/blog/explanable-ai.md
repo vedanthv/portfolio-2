@@ -41,3 +41,16 @@ Let's take up another example to understand the significance of Shapley Values i
 TLDR, Here is the query that John is facing : **Why was I denied the loan with a certainity of default being 70%, whereas the avg percentage of denial for applicants in the same range was 20%?**
 
 > Shapley values helps us here by taking the output of the model on John along with a 'comparative' group/team of other applicants and calculates the exact difference in parameters between John and the other players/loan applicants.
+
+Let's consider three factors that will contribute towards rejection or acceptance of a proposal for loan : 
+1. Credit Card Debt
+2. Low Net Worth
+3. Low Income Post Retirement
+
+If John's default rate is 60% and the default rate of accepted applicants is 20%, we will have to explain the difference of 40% with a comparative assignment to each of the above three features.
+Shapley algorithm might assign 25% to credit card debt, 10% to low net worth and 5% to low income post retirement. We are calculating the **average marginal contribution** of each of the features that could have contributed to the rejection of the proposal. 
+
+I'm confident you have understood the nuance of marginal contributions now! Here's a quick summary of Shapley values.
+
+<img src = "/blog/explanable-ai/shapleysumm.PNG">
+
