@@ -57,7 +57,7 @@ I'm confident you have understood the nuance of marginal contributions now! Here
 
 ### What are the advantages of Shapley values?
 
-- Efficient : Shapley values are amongst the most efficient explanable AI methods where the total sum of the marginal contributions of each entity(features) fed as input to the model must add up to the total gain(model score).
+- **Efficient** : Shapley values are amongst the most efficient explanable AI methods where the total sum of the marginal contributions of each entity(features) fed as input to the model must add up to the total gain(model score).
 
-- Equality : Players(features) not participating in the game(not contributing to the overall model score) should be assigned a shapley value of zero.
+- **Equality** : Players(features) not participating in the game(not contributing to the overall model score) should be assigned a shapley value of zero.
 
