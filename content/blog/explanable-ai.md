@@ -23,6 +23,11 @@ There are many challenges to deal with while working with black box ML models bu
 
 In this article, I'm going to give you a hands on practical view of how model explanability can help explain the decisions taken in a non-model centric and agnostic manner to convert code into phrasable conclusions that can be understood by the business and management in an organization.
 
+<figure>
+<img src = "/blog/explanable-ai/openbox.gif">
+<figcaption><center>ML Models are more than just a black box</center></figcaption>
+</figure>
+
 ## What are Shapley Values?
 
 Let's take an example to understand Shapley Values. 
@@ -74,5 +79,6 @@ I'm going to use three of the main techniques that are used on a large scale for
 - LIME
 
 As we proceed with each of these techniques, we will also understand the situations where each of there will be useful, their advantages and disadvantages.
+
 
 
