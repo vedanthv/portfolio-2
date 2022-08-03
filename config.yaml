@@ -46,6 +46,7 @@ params:
   ShowPostNavLinks: true  
   ShowBreadCrumbs: true
   comments: false
+  ShowReadingTime: true
 
 
   # for enchanced SEO
