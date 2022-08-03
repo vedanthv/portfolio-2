@@ -34,4 +34,10 @@ Obviously no right. A striker must get a greater share of the reward compared to
 
 > Shapley Values capture the marginal contribution of each player to the end result.
 
-I won't deep dive into the mathematics of marginal contributions but for now, just think of Marginal Contributions as **wighted average of the playoff gains** of each player who participates in the game.
+I won't deep dive into the mathematics of marginal contributions but for now, just think of Marginal Contributions as **wighted average of the playoff gains** of each player who participates in the game. Playoff gains here means the reward or penalty in some cases for each of the players.
+
+Let's take up another example to understand the significance of Shapley Values in a better and simpler manner. Consider a model that we are building that has to decide whether to disperse a loan to a person based on a number of features. A particular retiree John Doe finds out that his loan application was rejected with a 70% chance of him not able to clear the dues an defaulting on the amount. Jphn asks the bank manager as to why he was denied the loan whereas his friend Josh another retiree was given the loan. It's quite obvious that technical nuances of the model isn't going to be comprehended well by John and we need an altrnate method.
+
+TLDR, Here is the query that John is facing : **Why was I denied the loan with a certainity of default being 70%, whereas the avg percentage of denial for applicants in the same range was 20%?**
+
+> Shapley values helps us here by taking the output of the model on John along with a 'comparative' group/team of other applicants and calculates the exact difference in parameters between John and the other players/loan applicants.
