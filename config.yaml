@@ -47,7 +47,7 @@ params:
     enabled: true
     title: "Vedanth's Tech Blog"
     subtitle: Hi Everyone! This is Vedanth. I write posts on Generative AI, Deep Learning and AI in general documenting my learning journey. I don't have an RSS feed but follow me on LinkedIn for updates :) Have a nice day! 
-    imageUrl: "home/me.jpg"
+    imageUrl: "home/pic_1.jpg"
     imageWidth: 220
     imageHeight: 220
     
