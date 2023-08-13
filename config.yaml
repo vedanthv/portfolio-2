@@ -45,8 +45,8 @@ params:
   # Home Page
   profileMode:
     enabled: true
-    title: "Vedanth V Baliga"
-    subtitle: Senior Year Computer Science Undergrad | **Kaggle Expert**<br> Dabbling with Data Science <br> Loves Building **End to End ML Solutions** For Real World Problems
+    title: "Vedanth's Tech Blog"
+    subtitle: Hi Everyone! This is Vedanth. I write blogs on Generative AI, Deep Learning and AI in general documenting my learning journey. I don't have an RSS feed but follow me on LinkedIn for updates :) Have a nice day! 
     imageUrl: "home/me.jpg"
     imageWidth: 220
     imageHeight: 220
