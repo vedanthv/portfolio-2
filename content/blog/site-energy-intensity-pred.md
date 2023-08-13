@@ -1,7 +1,7 @@
 ---
 title: "Site Energy Intensity Prediction - WiDS 2022 Hackathon"
 description: "My Solution Approach for Site Energy Intensity Prediction Project which was part of the WiDS 2022 Kaggle Hackathon"
-dateString: Aug, 2023
+dateString: Aug 2023
 draft: false
 tags: ["ML", "Python", "Projects", "Climate Change AI","Energy Projects"]
 weight: 101
