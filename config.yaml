@@ -34,7 +34,7 @@ params:
   ShowCodeCopyButtons: true
   hideMeta: false
   ShowShareButtons : true
-  ShowReadingTime: true
+  ShowReadingTime: false
   ShowPostNavLinks: true  
   ShowBreadCrumbs: true
   comments: false
