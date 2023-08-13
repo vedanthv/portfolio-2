@@ -7,11 +7,11 @@ menu:
   main:
     - identifier: home
       name: Home
-      url: /me
+      url: /
       weight: 10
     - identifier: blog
       name: Blog
-      url: /
+      url: /blog
       weight: 40
     - identifier: search
       name: Search
